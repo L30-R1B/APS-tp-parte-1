@@ -18,6 +18,6 @@ public class Individuo {
     }
 
     public void printaIndiviuo(){
-        System.out.print("\t" + "ID (" + this.IDENTIFICADOR + "); NOME(" + this.NOME + "); ");
+        System.out.print("\t" + "ID : " + this.IDENTIFICADOR + "; NOME : " + this.NOME + "; ");
     }
 }

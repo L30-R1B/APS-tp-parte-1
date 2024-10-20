@@ -1,8 +1,8 @@
 package modelo;
 
 public class Guarda extends Individuo{
-    String turno;
-    String cargo;
+    private String turno;
+    private String cargo;
 
     public Guarda(int identificador, String nome, String turno, String cargo){
         super(identificador, nome);
@@ -26,8 +26,8 @@ public class Guarda extends Individuo{
         this.cargo = novoCargo;
     }
 
-    public void printGuarda(){
+    public void printaGuarda(){
         this.printaIndiviuo();
-        System.out.println("TURNO (" + turno + "); CARGO (" + cargo + ")");
+        System.out.println("TURNO : " + turno + "; CARGO : " + cargo);
     }
 }

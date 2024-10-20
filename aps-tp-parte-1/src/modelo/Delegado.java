@@ -20,7 +20,7 @@ public class Delegado extends Individuo{
 
     public void printaDelegado(){
         this.printaIndiviuo();
-        System.out.println("TELEFONE (" + this.TELEFONE + ") EMAIL (" + this.EMAIL + ")");
+        System.out.println("TELEFONE : " + this.TELEFONE + "; EMAIL : " + this.EMAIL);
     }
 
 }

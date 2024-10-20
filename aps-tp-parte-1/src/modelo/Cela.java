@@ -4,59 +4,63 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Cela {
-    int identificador;
-    int capacidade;
-    String nivelSeguranca;
-    List<Prisioneiro> prisioneiros;
-    List<Guarda> guardas;
+    private final int IDENTIFICADOR;
+    private final int CAPACIDADE_MAXIMA;
+    private final String NIVEL_SEGURANCA;
+    private final List<Prisioneiro> PRISIONEIROS;
 
     public Cela(int identificador, int capacidade, String nivelSeguranca){
-        this.identificador = identificador;
-        this.capacidade = capacidade;
-        this.nivelSeguranca = nivelSeguranca;
-        this.prisioneiros = new ArrayList<>();
-        this.guardas = new ArrayList<>();
+        this.IDENTIFICADOR = identificador;
+        this.CAPACIDADE_MAXIMA = capacidade;
+        this.NIVEL_SEGURANCA = nivelSeguranca;
+        this.PRISIONEIROS = new ArrayList<>();
     }
 
     public int getIdentificador(){
-        return this.identificador;
+        return this.IDENTIFICADOR;
     }
 
-    public int getCapacidade(){
-        return this.capacidade;
+    public int getCapacidadeMaxima(){
+        return this.CAPACIDADE_MAXIMA;
     }
 
-    public String nivelSeguranca(){
-        return this.nivelSeguranca;
+    public String getNivelSeguranca(){
+        return this.NIVEL_SEGURANCA;
+    }
+
+    public List<Prisioneiro> getPrisioneiros(){
+        return this.PRISIONEIROS;
     }
 
     public boolean inserePrisioneiro(Prisioneiro prisioneiro){
-        if(this.prisioneiros.size() < this.capacidade){
-            return this.prisioneiros.add(prisioneiro);
+        if(this.PRISIONEIROS.size() < this.CAPACIDADE_MAXIMA){
+            return this.PRISIONEIROS.add(prisioneiro);
         }
         return false;
-    }
-
-    public boolean insereGuarda(Guarda guarda){
-        return this.guardas.add(guarda);
     }
 
     public boolean removePrisioneiro(int identificador){
-        for(Prisioneiro prisioneiroAtual : this.prisioneiros){
+        for(Prisioneiro prisioneiroAtual : this.PRISIONEIROS){
             if(prisioneiroAtual.getIdentificador() == identificador){
-                return this.prisioneiros.remove(prisioneiroAtual);
+                return this.PRISIONEIROS.remove(prisioneiroAtual);
             }
         }
         return false;
     }
 
-    public boolean removeGuarda(int identificador){
-        for(Guarda guardaAtual : this.guardas){
-            if(guardaAtual.getIdentificador() == identificador){
-                return this.guardas.remove(guardaAtual);
+    public void printCela(){
+        System.out.println("\t\tIDENTIFICADOR DA CELA : " + this.IDENTIFICADOR);
+        System.out.println("\t\tCAPACIDADE MÁXIMA     : (" + this.PRISIONEIROS.size() + "/" + this.CAPACIDADE_MAXIMA + ")");
+        System.out.println("\t\tNÍVEL DE SEGURANÇA    : " + this.NIVEL_SEGURANCA);
+        System.out.println("\t\tLISTA DE PRISIONEIROS : {");
+        if(!this.PRISIONEIROS.isEmpty()){
+            for(Prisioneiro prisioneiroAtual : this.PRISIONEIROS){
+                System.out.print("\t\t");
+                prisioneiroAtual.printaPrisioneiro();
             }
+        }else{
+            System.out.println("\t\t\tNENHUM");
         }
-        return false;
+        System.out.println("\t\t}");
     }
-
 }

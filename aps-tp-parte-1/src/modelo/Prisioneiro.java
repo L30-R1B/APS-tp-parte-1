@@ -34,6 +34,6 @@ public class Prisioneiro extends Individuo{
 
     public void printaPrisioneiro(){
         this.printaIndiviuo();
-        System.out.println("CRIME COMETIDO (" + this.CRIME + "); PENA (" + this.pena + " anos); COMPORTAMENTO (" + this.comportamento + ")");
+        System.out.println("CRIME COMETIDO : " + this.CRIME + "; PENA : " + this.pena + " anos; COMPORTAMENTO : " + this.comportamento);
     }
 }
