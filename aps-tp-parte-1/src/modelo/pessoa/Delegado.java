@@ -1,4 +1,4 @@
-package modelo;
+package modelo.pessoa;
 
 public class Delegado extends Individuo{
     private final String TELEFONE;

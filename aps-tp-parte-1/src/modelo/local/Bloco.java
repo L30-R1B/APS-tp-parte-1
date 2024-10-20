@@ -1,7 +1,8 @@
-package modelo;
+package modelo.local;
 
 import java.util.ArrayList;
 import java.util.List;
+import modelo.pessoa.Guarda;
 
 public class Bloco {
     private final int IDENTIFICADOR;

@@ -1,7 +1,9 @@
-package modelo;
+package modelo.local;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import modelo.pessoa.Prisioneiro;
 
 public class Cela {
     private final int IDENTIFICADOR;

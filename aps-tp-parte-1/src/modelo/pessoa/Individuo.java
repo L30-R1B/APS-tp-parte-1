@@ -1,4 +1,4 @@
-package modelo;
+package modelo.pessoa;
 
 public class Individuo {
     private final int IDENTIFICADOR;

@@ -1,4 +1,4 @@
-package modelo;
+package modelo.pessoa;
 
 public class Prisioneiro extends Individuo{
     private final String CRIME;

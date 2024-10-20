@@ -1,4 +1,4 @@
-package modelo;
+package modelo.pessoa;
 
 public class Guarda extends Individuo{
     private String turno;

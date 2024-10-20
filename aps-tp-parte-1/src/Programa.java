@@ -1,11 +1,11 @@
 
 import java.util.ArrayList;
 import java.util.List;
-import modelo.Bloco;
-import modelo.Cela;
-import modelo.Guarda;
-import modelo.Prisao;
-import modelo.Prisioneiro;
+import modelo.local.Bloco;
+import modelo.local.Cela;
+import modelo.local.Prisao;
+import modelo.pessoa.Guarda;
+import modelo.pessoa.Prisioneiro;
 
 public class Programa {
 
